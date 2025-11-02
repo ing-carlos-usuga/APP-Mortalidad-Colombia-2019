@@ -164,7 +164,7 @@ def histograma_por_grupo_edad(df):
 
 
 app = Dash(__name__)
-server = app.server
+server = app.run
 app.title = "Mortalidad no fetal en Colombia - 2019"
 
 df = cargar_datos()
@@ -228,5 +228,5 @@ app.layout = html.Div([
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8050))
-    app.run_server(host="0.0.0.0", port=port, debug=False)
+    app.run(host="0.0.0.0", port=port, debug=False)
 
