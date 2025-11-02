@@ -165,7 +165,6 @@ def histograma_por_grupo_edad(df):
 
 app = Dash(__name__)
 app.title = "Mortalidad no fetal en Colombia - 2019"
-server=app.run
 df = cargar_datos()
 div = cargar_divipola()
 ciudades = cargar_ciudades()
