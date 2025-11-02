@@ -1,38 +1,28 @@
 Carlos Jesús Úsuga Rozo
-
 Maestría en Inteligencia Artificial – Universidad de La Salle
-
 Enlace de render
 
 https://usuga-act4-app-mortalidad-colombia-2019.onrender.com
-
 Enlace de github
 https://github.com/ing-carlos-usuga/APP-Mortalidad-Colombia-2019
- 
 Introducción del proyecto
-Esta aplicación web interactiva permite analizar la mortalidad no fetal en Colombia durante el año 2019, utilizando datos del DANE. A través de gráficos dinámicos y tablas estadísticas desarrolladas con Dash y Plotly Express, el usuario puede visualizar patrones de mortalidad por departamento, sexo, grupo de edad y causas principales.
+Esta aplicación web interactiva permite analizar la mortalidad en Colombia durante el año 2019, utilizando datos del DANE. A través de gráficos dinámicos y tablas estadísticas desarrolladas con Dash y Plotly, el usuario puede visualizar patrones de mortalidad por departamento, sexo, grupo de edad y causas principales.
 
 Objetivo
-El objetivo principal es ofrecer una herramienta analítica que permita:
+Objetivo principal es ofrecer una herramienta analítica que permita:
 Explorar y comprender la distribución de muertes por regiones y factores demográficos.
 
 
 Identificar tendencias mensuales, grupos de edad con mayor incidencia y principales causas de muerte.
 
 
-Proveer un recurso educativo y de análisis de datos con fines académicos en el contexto de la Maestría en Inteligencia Artificial.
-
-
-
+Proveer un recurso educativo analitico que pueda ser visualizado en la nube  y localmente
 Estructura del proyecto
-APP Mortalidad Colombia 2019/
 │
 <img width="346" height="555" alt="Captura de pantalla 2025-11-02 a la(s) 2 58 42 p m" src="https://github.com/user-attachments/assets/18b2c9ef-41d0-4b30-929d-04cdd52e97b1" />
 
-
-
-⚙️ Requisitos
-Versión de Python: 3.11 o superior
+Requisitos
+Versión de Python: 3.12 o superior
 Librerías necesarias (requirements.txt):
 dash==2.17.1
 pandas==2.2.2
@@ -42,24 +32,13 @@ openpyxl==3.1.5
 gunicorn==21.2.0
 
 
-💻 Software y tecnologías utilizadas
-Python 3.11+ – Lenguaje principal
-
-
+Software y tecnologías utilizadas
+Python 3.12 
 Dash & Plotly Express – Visualización interactiva de datos
-
-
 Pandas – Manipulación y análisis de datos
-
-
 OpenPyXL – Lectura de archivos Excel
-
-
 Gunicorn – Servidor de producción (para Render)
-
-
 Render – Plataforma de despliegue web
-
 
 
  Despliegue en Render (PaaS)
@@ -83,17 +62,17 @@ Configurar los archivos base:
 
 Procfile debe contener:
 
- web: gunicorn app:lanzamiento
-Asegurar que requirements.txt y PYTHON_VERSION estén en la raíz.
+ web: gunicorn app:server
+
+Asegurar que 
+requirements.txt y PYTHON_VERSION estén en la raíz.
 
 
 Render instalará automáticamente las dependencias y ejecutará el comando de inicio.
 
 
-Tras la compilación, la aplicación estará disponible en una URL pública (por ejemplo:
- https://mortalidad-colombia-2019.onrender.com).
-
-
+Tras la compilación, la aplicación estará disponible en una URL pública 
+https://usuga-act4-app-mortalidad-colombia-2019.onrender.com
 
 Ejecución local
 Clonar el repositorio
@@ -105,7 +84,8 @@ Ejecutar la aplicación
 python app.py
 
 Abrir en el navegador
-http://127.0.0.1:10000
+http://127.0.0.1:8050
+
 
 Visualizaciones principales
 La aplicación incluye los siguientes componentes interactivos:
@@ -131,8 +111,8 @@ Histograma por grupo de edad (según GRUPO_EDAD1 del DANE)
 
 
 Imágenes de soporte:
-
 Configuración de la versión de python para que no se ejecute automáticamente.
+
 <img width="521" height="188" alt="Captura de pantalla 2025-11-02 a la(s) 2 34 03 p m" src="https://github.com/user-attachments/assets/8b77ff3e-14c3-481c-9261-445cd9bfb852" />
 
 
